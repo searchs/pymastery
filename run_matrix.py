@@ -3,6 +3,9 @@
 from typing import Dict
 from collections import Counter
 
+
+"""Building a Christnas tree in code """
+
 pics = [
     [0, 0, 0, 1, 0, 0, 0],
     [0, 0, 1, 1, 1, 0, 0],
