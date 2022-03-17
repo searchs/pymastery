@@ -19,3 +19,33 @@ def check_duration():
 
 
 check_duration()
+
+
+# User authentication
+"""Create an @authenticated decorator that only allows the function
+run if user1 has 'valid' set to True 
+"""
+user1 = {"name": "Sofia", "valid": True}
+
+
+def authenticated(fn):
+    """Check user validity before allowing action"""
+
+    def wrapper(*args, **kwargs):
+        if args[0]["valid"]:
+            return fn(*args, **kwargs)
+
+    return wrapper
+
+
+@authenticated
+def message_friends(user1):
+    """Send message relating to passed user"""
+    return "message sent!"
+
+
+message_friends(user1)
+
+
+# Test
+assert message_friends(user1) == "message sent!"
