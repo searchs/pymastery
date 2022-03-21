@@ -14,18 +14,20 @@ def about_me(client: tweepy.Client) -> None:
 
 def get_ztm_tweets(client: tweepy.Client) -> list[tweepy.Tweet]:
     """Returns a list og latest ZTM tweets"""
-    ztm = client.get_user(username='zerotomasteryio')
-    response = client.get_users_tweets(ztm.data.id,)
+    ztm = client.get_user(username="itunj_now")
+    response = client.get_users_tweets(
+        ztm.data.id,
+    )
     return response.data
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     client = tweepy.Client(
         bearer_token=config.BEARER_TOKEN,
-        consumer_token=config.API_KEY,
+        consumer_key=config.API_KEY,
         consumer_secret=config.API_SECRET,
         access_token=config.ACCESS_TOKEN,
-        access_token_secret=config.ACCESS_SECRET
+        access_token_secret=config.ACCESS_SECRET,
     )
     print("==========================ABOUT ME=========================")
     about_me(client)
