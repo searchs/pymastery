@@ -33,4 +33,10 @@ if __name__ == "__main__":
     about_me(client)
     print("Tweets")
     for tweet in get_ztm_tweets(client):
-        print(tweet, end="\n\n")
+        # print(tweet.text)
+        pass
+
+    # print(dir(client))
+    me = client.get_me(user_fields=["public_metrics"])
+    print(me)
+    # print(client.get_list_followers())

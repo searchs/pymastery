@@ -1,0 +1,3 @@
+email, subject, message
+hello@softcreative.co.uk,Jackets in hash, Computing the whole rocks
+ola.ajibode@gmail.com,Grammy slocks, Do you know that Chris Rock slapped Will Smith in a corner and it was a bet worth $3M 
